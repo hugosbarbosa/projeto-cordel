@@ -3,16 +3,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+:root{
+    --fonte1: Verdana, Geneva, Tahoma, Sans-serif;
+    --fonte2: 'Passion One', cursive;
+    --fonte3: 'Sriracha', cursive;
+}
+
 *{
     margin: 0px;
     padding: 0px;
 }
 html, body{
+    font-family: var(--fonte1);
     min-height: 100vh;
     background-color: darkgray;
 }
 header{
-    font-family: 'Passion One' ,sans-serif;
+    font-family:var(--fonte2);
     padding: 40px 40px;
     text-align: center;
     background-color: black;
@@ -21,13 +29,14 @@ header{
 
 header>h1{
     font-style: normal;
-    font-size: 4em;
+    font-size: 10vw;
     font-variant: small-caps;
     text-decoration: solid;
     font-weight: 500;
 }
 
 header>p{
+    font-family: var(--fonte1);
     font-variant: s;
     text-decoration: none;
 
@@ -38,8 +47,14 @@ header a, footer a{
     text-decoration: none;
 }
 
-header>a:hover, footer a:hover{
+header a:hover, footer a:hover{
+    border-radius: 2px;
+    background-color: rgb(71, 71, 71);
     text-decoration: underline;
+}
+main{
+    font-family: var(--fonte3);
+    font-size: 3.5vw;
 }
 section{
     line-height: 2em;
@@ -54,13 +69,32 @@ section.fbranco{
 }
 
 section.ftransp{
-    background-color: rgb(44, 43, 43);
+    background-color: rgb(0, 0, 0);
     color: white;
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.564);
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 section.ftransp > p{
-    background-color: rgba(0, 0, 0, 0.342);
-    width: 400px;
+    background-color: rgba(0, 0, 0, 0.549);
+    display: inline-block;
+    padding: 8px;
+    text-shadow: 1px 1px 0px black;
+
+}
+
+section#img01{
+    background-image: url(imagens/background001.jpg);
+    background-position: right center ;
+    
+
+}
+
+section#img02{
+    background-image: url(imagens/background002.jpg);
+    background-position: right center;
+
 }
 
 footer{
